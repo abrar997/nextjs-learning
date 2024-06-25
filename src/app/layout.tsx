@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className="bg-dark text-main lg:px-12 lg:pt-6 lg:pb-10 p-4">
       <body className="grid gap-6">
         <Header />
-        <main>{children}</main>
+        <main className="text-main">{children}</main>
       </body>
     </html>
   );
