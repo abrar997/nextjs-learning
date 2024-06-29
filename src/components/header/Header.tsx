@@ -1,11 +1,12 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
+import Link from "next/link";
 import module from "./header.module.css";
 import { BiMenu } from "react-icons/bi";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className={module.header}>
       <div className="flex w-full border-b border-gray-600 pb-2 items-start">
