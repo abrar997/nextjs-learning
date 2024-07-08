@@ -15,7 +15,7 @@ export default function Header() {
             <Link href="/" className="lg:flex grid lg:items-end lg:gap-1">
               <span className="text-3xl font-semibold font-serif">AM</span>
               <span className="text-[12px] text-center text-secondary">
-                start InShaa'Allah learn next js
+                start InShaa Allah learn next js
               </span>
             </Link>
           </div>
