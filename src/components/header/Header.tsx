@@ -34,7 +34,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="flex gap-2 lg:gap-4">
+          <div className="lg:flex gap-2 lg:gap-4 hidden">
             <Link
               href="login"
               className="bg-secondary text-dark px-3 rounded flex items-center justify-center hover:opacity-80 py-1.5"
@@ -53,45 +53,54 @@ export default function Header() {
           <button
             type="button"
             className="text-4xl text-main"
-            onClick={() => setIsOpen((prev) => !prev)}
+            onClick={() => setIsOpen(!isOpen)}
           >
             <BiMenu />
           </button>
         </div>
       </div>
-      <div
-        className="lg:hidden"
-        style={{
-          clipPath: (isOpen && "polygon(0 0, 100% 0, 100% 100%, 0 100%)") || "",
-        }}
-      >
+      {isOpen && (
         <div
+          className="lg:hidden border border-gray-300 p-4 px-2 shadow-xl"
           style={{
             clipPath:
               (isOpen && "polygon(0 0, 100% 0, 100% 100%, 0 100%)") || "",
           }}
-          className="grid gap-2 lg:gap-4 text-lg capitalize divide-y divide-secondary text-main py-3 lg:hidden"
         >
-          <Link
-            href="/"
-            className="py-1 hover:bg-secondary hover:text-black px-2 rounded"
-          >
-            home
-          </Link>
-          <Link
-            href="admin"
-            className="py-1 hover:bg-secondary hover:text-black px-2 rounded"
-          >
-            admin
-          </Link>
-          <Link
-            href="articles"
-            className="py-1 hover:bg-secondary hover:text-black px-2 rounded"
-          >
-            articles
-          </Link>
+          <div className="flex flex-col gap-2 capitalize lg:hidden">
+            <Link
+              href="/"
+              className="py-1 hover:bg-secondary hover:text-slate-50 px-2 rounded"
+            >
+              home
+            </Link>
+            <Link
+              href="admin"
+              className="py-1 hover:bg-secondary hover:text-slate-50 px-2 rounded"
+            >
+              admin
+            </Link>
+            <Link
+              href="articles"
+              className="py-1 hover:bg-secondary hover:text-slate-50 px-2 rounded"
+            >
+              articles
+            </Link>
+            <Link
+              href="login"
+              className="bg-secondary text-dark rounded flex items-center justify-center hover:opacity-80 p-1"
+            >
+              login
+            </Link>
+            <Link
+              href="signup"
+              className="bg-secondary text-dark rounded flex items-center justify-center hover:opacity-80 p-1"
+            >
+              signUp
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

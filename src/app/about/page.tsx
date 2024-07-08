@@ -13,7 +13,7 @@ export default function About() {
           fugiat aspernatur? Aut, recusandae consectetur! Expedita debitis
           impedit facere eligendi repellat.
         </p>
-        <button className="bg-secondary text-black hover:bg-opacity-85 rounded px-6 py-2 w-52">
+        <button className="bg-secondary text-slate-50 hover:bg-opacity-85 rounded px-6 py-2 w-52">
           click here for more
         </button>
       </div>
