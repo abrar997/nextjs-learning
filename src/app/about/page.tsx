@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-export default function About() {
+export default function Page() {
   return (
     <div className="grid gap-3 lg:grid-cols-2 items-center lg:gap-12">
       <div className="flex flex-col gap-1 lg:gap-3">

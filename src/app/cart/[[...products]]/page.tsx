@@ -6,7 +6,7 @@ interface ProductsPageProps {
   };
 }
 
-export default function page({ params }: ProductsPageProps) {
+export default function Page({ params }: ProductsPageProps) {
   return (
     <div>
       Products page

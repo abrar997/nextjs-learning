@@ -8,7 +8,7 @@ interface SingleArticleItem {
   };
 }
 
-export default async function page({ params }: SingleArticleItem) {
+export default async function Page({ params }: SingleArticleItem) {
   // const response = await fetch(
   //   `https://jsonplaceholder.typicode.com/posts/${params.id}`
   // );
