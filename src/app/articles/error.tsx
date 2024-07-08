@@ -7,7 +7,7 @@ interface ErrorPageProps {
   reset: () => void;
 }
 
-export default function ArticlesErrorPage({ error, reset }: ErrorPageProps) {
+function ArticlesErrorPage({ error, reset }: ErrorPageProps) {
   return (
     <div className="text-center text-main flex flex-col items-center gap-5">
       <h1> we have error with Article Loading </h1>
@@ -25,3 +25,5 @@ export default function ArticlesErrorPage({ error, reset }: ErrorPageProps) {
     </div>
   );
 }
+
+export default ArticlesErrorPage;

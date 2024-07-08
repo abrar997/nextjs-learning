@@ -3,7 +3,7 @@ import Form from "@/components/reusable/Form";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-export default function page() {
+function Page() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,3 +32,5 @@ export default function page() {
     </div>
   );
 }
+
+export default Page;

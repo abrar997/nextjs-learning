@@ -6,15 +6,17 @@ interface ProductsPageProps {
   };
 }
 
-export default function Page({ params }: ProductsPageProps) {
+function Page({ params }: ProductsPageProps) {
   return (
     <div>
       Products page
       <ul>
         {params?.products?.map((route) => (
-          <li>{route} </li>
+          <li key={route}>{route}</li>
         ))}
       </ul>
     </div>
   );
 }
+
+export default Page;

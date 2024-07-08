@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import Form from "../../../components/reusable/Form";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function Page() {
+function Page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -32,3 +32,5 @@ export default function Page() {
     </div>
   );
 }
+
+export default Page;

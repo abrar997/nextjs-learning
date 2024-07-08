@@ -4,7 +4,7 @@ import ArticleItem from "@/components/articles/ArticleItem";
 import { Articles } from "@/components/utils/types";
 import { TbLayoutSidebarRightExpand } from "react-icons/tb";
 
-export default function Page() {
+function Page() {
   const [articles, setArticles] = useState<Articles[]>([]);
   const [showMore, setShowMore] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -62,3 +62,5 @@ export default function Page() {
     </div>
   );
 }
+
+export default Page;
