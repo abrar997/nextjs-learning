@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ArticleItem from "@/components/articles/ArticleItem";
 import { Articles } from "@/components/utils/types";
+import { TbLayoutSidebarRightExpand } from "react-icons/tb";
 
 export default function page() {
   const [articles, setArticles] = useState<Articles[]>([]);
@@ -14,7 +15,7 @@ export default function page() {
       throw new Error("there is issue with articles page");
     }
     const data: Articles[] = await response.json();
-    setArticles(data.slice(0, 9));
+    setArticles(data.slice(0, 12));
     setShowMore(true);
     setLoading(false);
   };
@@ -24,7 +25,7 @@ export default function page() {
     const data: Articles[] = await response.json();
     setArticles((prevItem) => [
       ...prevItem,
-      ...data.slice(prevItem.length, prevItem.length + 9),
+      ...data.slice(prevItem.length, prevItem.length + 12),
     ]);
   };
 
@@ -33,14 +34,14 @@ export default function page() {
   }, []);
 
   return (
-    <div>
+    <div className="">
       {/* <h1 className="text-4xl font-serif font-semibold capitalize">
         main Articles
       </h1> */}
       {loading ? (
         <p className="text-center text-2xl text-secondary">loading....</p>
       ) : (
-        <div className="grid lg:grid-cols-3 items-start gap-12">
+        <div className="grid lg:grid-cols-4 items-start gap-12">
           {/* {fetchData.map((i: any) => ( instead of using any we can replace it with type Articles  */}
 
           {articles.map((i) => (
@@ -51,10 +52,10 @@ export default function page() {
       {showMore && (
         <div className="flex items-center justify-center mt-3 lg:mt-12">
           <button
-            className="bg-secondary rounded px-6 py-1 text-dark"
+            className="text-secondary shadow-md rounded border text-xl px-6 py-1"
             onClick={loadMore}
           >
-            more
+            <TbLayoutSidebarRightExpand />
           </button>
         </div>
       )}

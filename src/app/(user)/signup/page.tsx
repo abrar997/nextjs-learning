@@ -17,12 +17,12 @@ export default function page() {
     } else if (password === "") {
       return toast.error("password is required");
     }
-    console.log(email, password);
+    console.log(name, email, password);
   };
   return (
-    <div className="p-4 rounded lg:py-12 shadow-xl lg:mx-24 bg-main gap-2 border border-gray-800 flex flex-col text-main">
+    <div className="p-4 bg-white rounded lg:py-12 shadow lg:mx-24 gap-2 flex flex-col text-main">
       <h1 className="text-blue-800 lg:text-3xl font-semibold font-serif">
-        Log in
+        create new account
       </h1>
       <Form
         type="register"

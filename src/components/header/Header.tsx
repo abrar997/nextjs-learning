@@ -19,7 +19,7 @@ export default function Header() {
               </span>
             </Link>
           </div>
-          <div className="lg:flex gap-4 text-main hidden capitalize">
+          <div className="lg:flex gap-4 text-main font-semibold hidden capitalize">
             <Link className="hover:opacity-80" href="/">
               home
             </Link>

@@ -10,9 +10,9 @@ export default function ArticleItem({ article }: ArticlesProps) {
   return (
     <div
       key={article.id}
-      className="shadow-xl hover:shadow-2xl transition-all duration-300 grid gap-4 p-2"
+      className="shadow bg-white transition-all duration-300 grid gap-2 p-3"
     >
-      <h1 className="text-secondary text-xl line-clamp-1">{article.title} </h1>
+      <h1 className="font-semibold text-xl line-clamp-1">{article.title} </h1>
       <p className="text-gray-400 text-sm line-clamp-2">{article.body}</p>
       <Link
         href={`/articles/${article.id}`}

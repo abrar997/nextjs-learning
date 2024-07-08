@@ -21,8 +21,20 @@ export default async function page({ params }: SingleArticleItem) {
 
   try {
     const response = await fetch(
-      `https://jsonplaceholder.typicode.com/posts/${params.id}`
+      `https://jsonplaceholder.typicode.com/posts/${params.id}`,
+      {
+        //we don't use cache when data updates quickly,
+        // if it's fixed data when can use cache as memory to save data
+        // cache: "no-store", //means next will send request always when open article page instead of save data in cache data
+        //----------------
+        //to make next make refresh to data we use
+        next: { revalidate: 50 }, //means 50 second
+      }
     );
+    //يعني تكول لل next
+    // كل مرة تدخل هذه الصفحة وتلخذ البيانات من API
+    // احفظ الداتا بال cache data
+    // ولكن كل 50 ثانية ارسل طلب للبياننات واعممل تحديث عليهة
 
     const item: Articles = await response.json();
 
