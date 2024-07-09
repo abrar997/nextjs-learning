@@ -1,0 +1,5 @@
+1-client side rendering
+2-at server rendering (pre-rendering)
+at server rendering :
+1-SSG static site generation at build time when run npm run build all pages at one time use with fixed contain like documentation
+2-SSR server side rendering at request time with change and always update data that can't save in cache data

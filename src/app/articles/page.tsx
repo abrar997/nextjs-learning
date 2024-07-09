@@ -34,7 +34,7 @@ function Page() {
   }, []);
 
   return (
-    <div className="">
+    <div className="lg:p-12 py-4">
       {/* <h1 className="text-4xl font-serif font-semibold capitalize">
         main Articles
       </h1> */}

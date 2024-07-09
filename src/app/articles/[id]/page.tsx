@@ -40,14 +40,14 @@ async function Page({ params }: SingleArticleItem) {
 
     return (
       <div>
-        <section className="p-4 lg:mx-16 mt-6 shadow-xl grid gap-4 bg-[#363636bf]">
+        <div className="p-4 bg-white rounded lg:p-12 shadow m-4 lg:my-12 lg:mx-24 gap-2 flex flex-col text-main">
           <div className="flex gap-12 items-center">
             <h1 className="text-lg text-secondary">{item.title}</h1>
             <h1 className="text-sm text-gray-400 border-b">20/5/2024</h1>
           </div>
           <h1 className="text-gray-200">20/5/2024</h1>
           <p>{item.body}</p>
-        </section>
+        </div>
       </div>
     );
   } catch {

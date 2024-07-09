@@ -9,8 +9,8 @@ export default function Header() {
 
   return (
     <div className={module.header}>
-      <div className="flex w-full border-b border-gray-600 pb-2 items-start">
-        <div className="flex lg:flex-row w-full lg:justify-between flex-col gap-1">
+      <div className="flex w-full border-b border-gray-600 pb-2 items-start lg:py-4 p-4">
+        <div className="flex lg:flex-row w-full items-center lg:justify-between flex-col gap-1">
           <div className="text-main flex justify-between items-start">
             <Link href="/" className="lg:flex grid lg:items-end lg:gap-1">
               <span className="text-3xl font-semibold font-serif">AM</span>
@@ -36,13 +36,13 @@ export default function Header() {
 
           <div className="lg:flex gap-2 lg:gap-4 hidden">
             <Link
-              href="login"
+              href="/login"
               className="bg-secondary text-dark px-3 rounded flex items-center justify-center hover:opacity-80 py-1.5"
             >
               login
             </Link>
             <Link
-              href="signup"
+              href="/signup"
               className="bg-secondary text-dark  px-1 lg:px-3 rounded flex items-center justify-center hover:opacity-80"
             >
               signUp
@@ -87,13 +87,13 @@ export default function Header() {
               articles
             </Link>
             <Link
-              href="login"
+              href="/login"
               className="bg-secondary text-dark rounded flex items-center justify-center hover:opacity-80 p-1"
             >
               login
             </Link>
             <Link
-              href="signup"
+              href="/signup"
               className="bg-secondary text-dark rounded flex items-center justify-center hover:opacity-80 p-1"
             >
               signUp

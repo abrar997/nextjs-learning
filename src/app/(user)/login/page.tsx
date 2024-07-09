@@ -20,7 +20,7 @@ function Page() {
   };
 
   return (
-    <div className="p-4 rounded lg:py-12 shadow lg:mx-24 bg-white gap-2 flex flex-col text-main">
+    <div className="p-4 bg-white rounded lg:p-12 shadow m-4 lg:my-12 lg:mx-24 gap-2 flex flex-col text-main">
       <h1 className="text-blue-800 lg:text-3xl font-semibold font-serif">
         Log in
       </h1>
