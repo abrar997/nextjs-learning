@@ -1,7 +1,8 @@
-//name with [] means dynamic rout
+import CommentForm from "@/components/articles/comments/CommentForm";
+import CommentItem from "@/components/articles/comments/CommentItem";
 import { Articles } from "@/components/utils/types";
-import React from "react";
 
+//name with [] means dynamic rout
 interface SingleArticleItem {
   params: {
     id: string;
@@ -39,14 +40,21 @@ async function Page({ params }: SingleArticleItem) {
     const item: Articles = await response.json();
 
     return (
-      <div>
-        <div className="p-4 bg-white rounded lg:p-12 shadow m-4 lg:my-12 lg:mx-24 gap-2 flex flex-col text-main">
+      <div className="p-4 grid lg:gap-6 gap-4 m-4 lg:my-12 lg:mx-24">
+        <div className="grid lg:gap-2 gap-4 lg:px-4 p-4 rounded lg:py-12 shadow  text-main bg-white">
           <div className="flex gap-12 items-center">
-            <h1 className="text-lg text-secondary">{item.title}</h1>
-            <h1 className="text-sm text-gray-400 border-b">20/5/2024</h1>
+            <h1 className="text-lg text-secondary font-semibold">
+              {item.title}
+            </h1>
           </div>
-          <h1 className="text-gray-200">20/5/2024</h1>
+          <h1 className="text-gray-300">20/5/2024</h1>
           <p>{item.body}</p>
+        </div>
+
+        <CommentForm />
+        <div className="grid gap-3">
+          <h1 className="font-semibold">Comments :</h1>
+          <CommentItem />
         </div>
       </div>
     );

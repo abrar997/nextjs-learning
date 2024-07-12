@@ -27,7 +27,12 @@ function Page() {
       <Form
         type="login"
         onSubmit={handleSubmit}
-        data={{ email, password, setEmail, setPassword }}
+        data={{
+          email: email,
+          password: password,
+          setEmail: setEmail,
+          setPassword: setPassword,
+        }}
       />
     </div>
   );

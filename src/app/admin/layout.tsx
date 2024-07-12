@@ -1,9 +1,15 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import { Metadata } from "next";
 
 interface DashboardLayout {
   children: React.ReactNode;
 }
+
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+  description: "this is admin dashboard page",
+};
 
 const Layout = ({ children }: DashboardLayout) => {
   return (

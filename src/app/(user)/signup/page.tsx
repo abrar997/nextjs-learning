@@ -27,7 +27,14 @@ function Page() {
       <Form
         type="register"
         onSubmit={handleSubmit}
-        data={{ email, password, name, setEmail, setPassword, setName }}
+        data={{
+          email: email,
+          password: password,
+          name: name,
+          setEmail: setEmail,
+          setPassword: setPassword,
+          setName: setName,
+        }}
       />
     </div>
   );

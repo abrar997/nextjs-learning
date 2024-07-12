@@ -19,7 +19,12 @@ function Page() {
       </h1>
       <Form
         type="admin"
-        data={{ title, setTitle, description, setDescription }}
+        data={{
+          title: title,
+          setTitle: setTitle,
+          description: description,
+          setDescription: setDescription,
+        }}
         onSubmit={handleSubmit}
       />
     </div>
