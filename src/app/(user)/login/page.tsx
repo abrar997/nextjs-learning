@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import Form from "../../../components/reusable/Form";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/navigation";
 
 function Page() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,6 +19,9 @@ function Page() {
       return toast.error("password is required");
     }
     console.log(email, password);
+    //same job
+    router.push("/"); // we click on back button take me to login page that means push put loagin page in history of browser
+    // router.replace("/"); // if i wouldn't user not able to back to login page we can use this , but if we want user able back to login page we can use puh
   };
 
   return (

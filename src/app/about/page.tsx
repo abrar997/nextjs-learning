@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-function Page() {
+async function Page() {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+
   return (
     <div className="grid gap-3 lg:p-12 p-4 lg:grid-cols-2 items-center lg:gap-12">
       <div className="flex flex-col gap-1 lg:gap-3">
