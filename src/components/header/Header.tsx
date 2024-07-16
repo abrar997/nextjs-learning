@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className={module.header}>
       <div className="flex w-full border-b border-gray-600 pb-2 items-start lg:py-4 p-4">
-        <div className="flex lg:flex-row w-full items-center lg:justify-between flex-col gap-1">
+        <div className="flex lg:flex-row w-full lg:items-center lg:justify-between flex-col gap-1">
           <div className="text-main flex justify-between items-start">
             <Link href="/" className="lg:flex grid lg:items-end lg:gap-1">
               <span className="text-3xl font-semibold font-serif">AM</span>
@@ -68,21 +68,15 @@ export default function Header() {
           }}
         >
           <div className="flex flex-col gap-2 capitalize lg:hidden">
-            <Link
-              href="/"
-              className="py-1 hover:bg-secondary hover:text-slate-50 px-2 rounded"
-            >
+            <Link href="/" className="py-1 hover:bg-slate-300 px-2 rounded">
               home
             </Link>
-            <Link
-              href="admin"
-              className="py-1 hover:bg-secondary hover:text-slate-50 px-2 rounded"
-            >
+            <Link href="admin" className="py-1 hover:bg-slate-300 px-2 rounded">
               admin
             </Link>
             <Link
               href="articles"
-              className="py-1 hover:bg-secondary hover:text-slate-50 px-2 rounded"
+              className="py-1 hover:bg-slate-300 px-2 rounded"
             >
               articles
             </Link>

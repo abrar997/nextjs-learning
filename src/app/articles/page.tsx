@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ArticleItem from "@/components/articles/ArticleItem";
-import { Articles } from "@/components/utils/types";
+import { Articles } from "@/utils/types";
 import Form from "@/components/reusable/Form";
 import Pagination from "@/components/articles/Pagination";
 import { useRouter } from "next/navigation";
@@ -29,8 +29,8 @@ const Page = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(searchArticle);
-    router.replace("/articles/search");
+    // query string any thing you write it after ?
+    console.log(router.push(`/articles/search?searchText=${searchArticle}`));
   };
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="lg:p-12 py-4 grid lg:gap-6">
+    <div className="lg:p-12 p-4 grid gap-3 lg:gap-6">
       <Form
         type="search"
         data={{ search: searchArticle, setSearch: setSearchArticle }}

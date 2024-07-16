@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Articles } from "../utils/types";
+import { Articles } from "../../utils/types";
 
 interface ArticlesProps {
   article: Articles;

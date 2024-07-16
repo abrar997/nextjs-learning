@@ -1,6 +1,6 @@
 import CommentForm from "@/components/articles/comments/CommentForm";
 import CommentItem from "@/components/articles/comments/CommentItem";
-import { Articles } from "@/components/utils/types";
+import { Articles } from "@/utils/types";
 
 //name with [] means dynamic rout
 interface SingleArticleItem {
